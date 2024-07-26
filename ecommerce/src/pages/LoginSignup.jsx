@@ -17,7 +17,7 @@ const LoginSignup = () => {
   const login = async () =>{
     console.log("Login function executed",formData);
     let responseData;
-    await fetch('http://localhost:4001/login',{
+    await fetch('https://shopifyecommerce.onrender.com',{
       method:'POST',
       headers:{
         Accept:'application/formData',
@@ -38,7 +38,7 @@ const LoginSignup = () => {
   const signup = async () =>{
     console.log("signup function executed",formData);
     let responseData;
-    await fetch('http://localhost:4001/signup',{
+    await fetch('https://shopifyecommerce.onrender.com',{
       method:'POST',
       headers:{
         Accept:'application/formData',
