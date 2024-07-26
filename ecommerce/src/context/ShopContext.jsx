@@ -15,14 +15,14 @@ const ShopContextProvider = (props) => {
     const [cartItems, setCartItems] = useState(getDefaultCart());
 
     useEffect(() => {
-        fetch('http://localhost:4001/allproducts')
+        fetch('https://shopifyecommerce.onrender.com')
             .then((response) => response.json())
             .then((data) => setAll_Product(data))
             .catch((error) => console.error('Error fetching products:', error));
 
         const authToken = localStorage.getItem('auth-token');
         if (authToken) {
-            fetch('http://localhost:4001/getcart', {
+            fetch('https://shopifyecommerce.onrender.com', {
                 method: 'POST',
                 headers: {
                     Accept: 'application/json',
@@ -42,7 +42,7 @@ const ShopContextProvider = (props) => {
 
         const authToken = localStorage.getItem('auth-token');
         if (authToken) {
-            fetch('http://localhost:4001/addcart', {
+            fetch('https://shopifyecommerce.onrender.com', {
                 method: 'POST',
                 headers: {
                     Accept: 'application/json',
@@ -62,7 +62,7 @@ const ShopContextProvider = (props) => {
 
         const authToken = localStorage.getItem('auth-token');
         if (authToken) {
-            fetch('http://localhost:4001/removefromcart', {
+            fetch('https://shopifyecommerce.onrender.com', {
                 method: 'POST',
                 headers: {
                     Accept: 'application/json',
